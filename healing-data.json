@@ -1,0 +1,192 @@
+{
+  "By.id: username" : {
+    "tag" : "input",
+    "id" : "",
+    "name" : null,
+    "className" : "input-field username-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "class",
+    "locatorValue" : "input-field"
+  },
+  "By.id: password" : {
+    "tag" : "input",
+    "id" : "username",
+    "name" : null,
+    "className" : "input-field username-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "id",
+    "locatorValue" : "username"
+  },
+  "By.name: username" : {
+    "tag" : "input",
+    "id" : "",
+    "name" : null,
+    "className" : "input-field username-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "class",
+    "locatorValue" : "input-field"
+  },
+  "By.className: btn-primary" : {
+    "tag" : "button",
+    "id" : "loginBtn",
+    "name" : null,
+    "className" : "btn-primary login-button",
+    "text" : "Login",
+    "healedLocator" : null,
+    "locatorStrategy" : "class",
+    "locatorValue" : "btn-primary"
+  },
+  "By.cssSelector: .btn-primary.login-button" : {
+    "tag" : "button",
+    "id" : "loginBtn",
+    "name" : null,
+    "className" : "btns-primary login-button",
+    "text" : "Login",
+    "healedLocator" : null,
+    "locatorStrategy" : "id",
+    "locatorValue" : "loginBtn"
+  },
+  "By.id: email" : {
+    "tag" : "input",
+    "id" : "email",
+    "name" : null,
+    "className" : "profile-input email-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "id",
+    "locatorValue" : "email"
+  },
+  "By.id: phone" : {
+    "tag" : "input",
+    "id" : "phone",
+    "name" : null,
+    "className" : "profile-input phone-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "id",
+    "locatorValue" : "phone"
+  },
+  "By.id: updateProfileBtn" : {
+    "tag" : "button",
+    "id" : "updateProfileBtn",
+    "name" : null,
+    "className" : "btn-action update-button",
+    "text" : "Update Profile",
+    "healedLocator" : null,
+    "locatorStrategy" : "id",
+    "locatorValue" : "updateProfileBtn"
+  },
+  "By.id: logoutBtn" : {
+    "tag" : "button",
+    "id" : "logoutBtn",
+    "name" : null,
+    "className" : "btn-action logout-button",
+    "text" : "Logout",
+    "healedLocator" : null,
+    "locatorStrategy" : "id",
+    "locatorValue" : "logoutBtn"
+  },
+  "By.cssSelector: .button-primary.login-button" : {
+    "tag" : "button",
+    "id" : "loginBtn",
+    "name" : null,
+    "className" : "button-primary login-button",
+    "text" : "Login",
+    "healedLocator" : null,
+    "locatorStrategy" : "css",
+    "locatorValue" : ".button-primary.login-button"
+  },
+  "By.name: login" : {
+    "tag" : "button",
+    "id" : "loginBtn",
+    "name" : null,
+    "className" : "button-primary login-button",
+    "text" : "Login",
+    "healedLocator" : null,
+    "locatorStrategy" : "name",
+    "locatorValue" : "login"
+  },
+  "By.id: loginBtn" : {
+    "tag" : "button",
+    "id" : "loginBtn",
+    "name" : null,
+    "className" : "button-primary login-button",
+    "text" : "Login",
+    "healedLocator" : null,
+    "locatorStrategy" : "id",
+    "locatorValue" : "loginBtn"
+  },
+  "By.cssSelector: [data-test='username-input']" : {
+    "tag" : "input",
+    "id" : "username",
+    "name" : null,
+    "className" : "input-field username-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "css",
+    "locatorValue" : "[data-test='username-input']"
+  },
+  "By.cssSelector: [data-test='password-input']" : {
+    "tag" : "input",
+    "id" : "password",
+    "name" : null,
+    "className" : "input-field password-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "css",
+    "locatorValue" : "[data-test='password-input']"
+  },
+  "By.cssSelector: #username" : {
+    "tag" : "input",
+    "id" : "username",
+    "name" : null,
+    "className" : "input-field username-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "css",
+    "locatorValue" : "#username"
+  },
+  "By.cssSelector: #password" : {
+    "tag" : "input",
+    "id" : "password",
+    "name" : null,
+    "className" : "input-field password-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "css",
+    "locatorValue" : "#password"
+  },
+  "By.name: user.name" : {
+    "tag" : "input",
+    "id" : "username",
+    "name" : null,
+    "className" : "input-field username-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "name",
+    "locatorValue" : "user.name"
+  },
+  "By.name: password" : {
+    "tag" : "input",
+    "id" : "password",
+    "name" : null,
+    "className" : "input-field password-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "name",
+    "locatorValue" : "password"
+  },
+  "By.cssSelector: .input-field.username-field" : {
+    "tag" : "input",
+    "id" : "username",
+    "name" : "username",
+    "className" : "harshu",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "id",
+    "locatorValue" : "username"
+  }
+}
