@@ -181,12 +181,32 @@
   },
   "By.cssSelector: .input-field.username-field" : {
     "tag" : "input",
-    "id" : "username",
+    "id" : "bannu",
     "name" : "username",
-    "className" : "harshu",
+    "className" : "input-field username-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "css",
+    "locatorValue" : ".input-field.username-field"
+  },
+  "By.cssSelector: .input-field.password-field" : {
+    "tag" : "input",
+    "id" : "passing",
+    "name" : "password",
+    "className" : "input-field password-field",
+    "text" : "",
+    "healedLocator" : null,
+    "locatorStrategy" : "css",
+    "locatorValue" : ".input-field.password-field"
+  },
+  "By.id: vinay" : {
+    "tag" : "input",
+    "id" : "blue",
+    "name" : "username",
+    "className" : "input-field username-field",
     "text" : "",
     "healedLocator" : null,
     "locatorStrategy" : "id",
-    "locatorValue" : "username"
+    "locatorValue" : "blue"
   }
 }

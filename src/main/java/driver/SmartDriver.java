@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.List;
 
@@ -33,7 +34,7 @@ public class SmartDriver {
 
         ElementMetadata storedMeta = LocatorStorage.get(locator.toString());
 
-        // 🔹 1️⃣ Try stored healed locator first
+        // Try stored healed locator first
         if (storedMeta != null && storedMeta.locatorStrategy != null) {
             try {
                 By rebuilt = buildLocator(
@@ -59,7 +60,7 @@ public class SmartDriver {
             }
         }
 
-        // 🔹 2️⃣ Try original locator
+        // Try original locator
         try {
             WebElement element = driver.findElement(locator);
 
@@ -82,7 +83,7 @@ public class SmartDriver {
             String failShot = ScreenshotUtil.capture(driver);
             HealingReport.logFailure(locator.toString(), failShot);
 
-            // 🔹 3️⃣ Attempt healing
+            // Attempt healing
             WebElement healedElement = healElement(locator);
 
             if (healedElement != null) {
@@ -95,9 +96,8 @@ public class SmartDriver {
         }
     }
 
-    // ===============================
+    
     // SAVE METADATA
-    // ===============================
     private void saveMetadata(By locator, WebElement element) {
 
         ElementMetadata meta = new ElementMetadata();
@@ -112,9 +112,8 @@ public class SmartDriver {
         LocatorStorage.save(locator.toString(), meta);
     }
 
-    // ===============================
-    // 🔥 HYBRID AI HEALING ENGINE
-    // ===============================
+    
+    // HYBRID AI HEALING ENGINE
     private WebElement healElement(By oldLocator) {
 
         ElementMetadata oldMeta = LocatorStorage.get(oldLocator.toString());
@@ -148,7 +147,7 @@ public class SmartDriver {
             if (safeEqualsIgnoreCase(className, oldMeta.className)) rawScore += 2;
             if (safeEqualsIgnoreCase(text, oldMeta.text)) rawScore += 2;
 
-            // ===== FUZZY SIMILARITY =====
+            // FUZZY SIMILARITY 
             double idSimilarity = StringSimilarity.similarityPercent(oldMeta.id, id);
             double nameSimilarity = StringSimilarity.similarityPercent(oldMeta.name, name);  // ✅ ADD
             double textSimilarity = StringSimilarity.similarityPercent(oldMeta.text, text);
@@ -157,7 +156,7 @@ public class SmartDriver {
                               + (nameSimilarity * 0.3)   // ✅ ADD
                               + (textSimilarity * 0.2);
 
-            // ===== HYBRID FINAL SCORE =====
+            // HYBRID FINAL SCORE 
             double rawPercent = (rawScore / 16.0) * 100;  // ✅ UPDATED
             double finalScore = (rawPercent * 0.6) + (fuzzyScore * 0.4);
 
@@ -167,7 +166,7 @@ public class SmartDriver {
             }
         }
 
-        // 🔹 Threshold (AI confidence)
+        // Threshold (AI confidence)
         if (highestFinalScore < 40) {
             System.out.println("Healing confidence too low: "
                     + String.format("%.2f", highestFinalScore) + "%");
@@ -181,7 +180,7 @@ public class SmartDriver {
         System.out.println("AI Healing Confidence: "
                 + String.format("%.2f", highestFinalScore) + "%");
 
-        // ===== Build new locator =====
+        //  Build new locator 
         ElementMetadata updatedMeta = new ElementMetadata();
         updatedMeta.tag = bestMatch.getTagName();
         updatedMeta.name = bestMatch.getAttribute("name");
@@ -222,9 +221,8 @@ public class SmartDriver {
         return bestMatch;
     }
 
-    // ===============================
+    
     // Utility Methods
-    // ===============================
     private boolean safeEquals(String a, String b) {
         return a != null && b != null && a.equals(b);
     }

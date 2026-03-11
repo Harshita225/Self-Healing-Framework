@@ -16,11 +16,9 @@ public class BasicTest {
         try {
             driver.get("file:///C:/Users/harshitha.m/OneDrive%20-%20Praval/Desktop/login%20site/login.html");
             Thread.sleep(2000);
-            driver.findElement(By.cssSelector(".input-field.username-field")).sendKeys("admin");
-            driver.findElement(By.name("password")).sendKeys("1234");
-//            driver.findElement(By.cssSelector("[data-test='username-input']")).sendKeys("admin");
-//            driver.findElement(By.cssSelector("[data-test='password-input']")).sendKeys("1234");
-
+            
+            driver.findElement(By.id("username")).sendKeys("admin");
+            driver.findElement(By.cssSelector(".input-field.password-field")).sendKeys("1234");
             driver.findElement(By.id("loginBtn")).click();
             Thread.sleep(2000);
 
